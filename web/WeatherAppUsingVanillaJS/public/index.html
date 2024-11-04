@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="weather-widget" id="widget">
+			<!-- Front Side (Weather) -->
+			<div class="widget-front sunny" id="weatherFront">
+				<div class="widget-header">
+					<div class="location" id="location">San Francisco</div>
+					<div class="search-icon" onclick="flipWidget()">🔍</div>
+				</div>
+				<div class="date">Sunday, 27 Oct</div>
+
+				<div class="weather-icon" id="weatherIcon">
+					☀️
+				</div>
+
+				<div class="weather-status" id="weatherStatus">Sunny</div>
+				<div class="temperature" id="temp">72°F</div>
+
+				<div class="details">
+					<div class="detail-item">
+						<div class="detail-label">HUMIDITY</div>
+						<div class="detail-value" id="humidity">65%</div>
+					</div>
+					<div class="detail-item">
+						<div class="detail-label">WIND</div>
+						<div class="detail-value" id="wind">12mph</div>
+					</div>
+					<div class="detail-item">
+						<div class="detail-label">RAIN</div>
+						<div class="detail-value" id="rain">0%</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Back Side (Search) -->
+			<div class="widget-back">
+				<div class="widget-header">
+					<div class="back-icon" onclick="flipWidget()">←</div>
+					<input type="text" class="search-input" id="searchInput"
+						placeholder="Search location..." onkeypress="handleSearch(event)">
+
+				</div>
+
+				<div class="search-container">
+					<div class="recent-searches">
+						<div class="recent-item" onclick="updateWeather('rainy')">Seattle
+							(Rainy)</div>
+						<div class="recent-item" onclick="updateWeather('cloudy')">London
+							(Cloudy)</div>
+						<div class="recent-item" onclick="updateWeather('night')">Tokyo (Night)
+						</div>
+						<div class="recent-item" onclick="updateWeather('thunderstorm')">Miami
+							(Thunderstorm)</div>
+						<div class="recent-item" onclick="updateWeather('snow')">Montreal (Snow)
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.js">
+
+	</script>
+</body>
+
+</html>
